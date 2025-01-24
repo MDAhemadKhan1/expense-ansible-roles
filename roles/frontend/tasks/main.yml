@@ -37,8 +37,6 @@
   ansible.builtin.copy:
     src: frontend.conf
     dest: /etc/nginx/default.d/frontend.conf
+  notify:
+  - Restart nginx  
 
-- name: Restart nginx
-  ansible.builtin.service:
-    name: nginx 
-    state: restarted
