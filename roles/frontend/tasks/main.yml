@@ -1,13 +1,13 @@
-- name: instaall nginx
+- name: install nginx
   ansible.builtin.package:
     name: nginx
     state: installed
 
 - name: enable and start nginx
   ansible.builtin.service:
-    name: nginx
-    state: started
-    enabled: yes
+       name: nginx
+       state: started
+       enabled: yes
 
 
 - name: Remove file (delete file)
