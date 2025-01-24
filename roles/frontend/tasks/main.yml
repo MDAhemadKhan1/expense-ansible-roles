@@ -34,7 +34,7 @@
     remote_src: yes
 
 - name: copy frontend config
-    ansible.builtin.copy:
+  ansible.builtin.copy:
     src: frontend.conf
     dest: /etc/nginx/default.d/frontend.conf
   notify:
