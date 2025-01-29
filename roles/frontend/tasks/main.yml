@@ -33,19 +33,19 @@
     dest: /usr/share/nginx/html
     remote_src: yes
 
-# - name: copy frontend config
-#   ansible.builtin.copy:
-#     src: frontend.conf
-#     dest: /etc/nginx/default.d/frontend.conf
-  
-# - name: restart nginx
-#   ansible.builtin.service:
-#     name: nginx 
-#     state: restarted  
-
-- name: copy expense config
+- name: copy frontend config
   ansible.builtin.copy:
     src: expense.conf
     dest: /etc/nginx/default.d/expense.conf
-  notify: 
-  - Restart Nginx
+  
+- name: restart nginx
+  ansible.builtin.service:
+    name: nginx 
+    state: restarted  
+
+# - name: copy expense config
+#   ansible.builtin.copy:
+#     src: expense.conf
+#     dest: /etc/nginx/default.d/expense.conf
+#   notify: 
+#   - Restart Nginx
