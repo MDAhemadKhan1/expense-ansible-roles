@@ -43,9 +43,3 @@
     name: nginx 
     state: restarted  
 
-# - name: copy expense config
-#   ansible.builtin.copy:
-#     src: expense.conf
-#     dest: /etc/nginx/default.d/expense.conf
-#   notify: 
-#   - Restart Nginx
