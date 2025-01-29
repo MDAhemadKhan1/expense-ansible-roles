@@ -40,8 +40,8 @@
 #   notify:
 #   - Restart nginx  
 - name: copy expense config
-  ansible.builtin.template:
-    src: frontend.conf.j2
-    dest: /etc/nginx/default.d/frontend.conf
+  ansible.builtin.copy:
+    src: expense.conf
+    dest: /etc/nginx/default.d/expense.conf
   notify: 
   - Restart Nginx
