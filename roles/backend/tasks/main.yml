@@ -6,7 +6,7 @@
 
 - name: install nodejs
   ansible.builtin.package:
-    name: "{{item}}"
+    name: "{{ item }}"
     state: present
   loop:
   - nodejs
@@ -53,8 +53,8 @@
   community.mysql.mysql_db:
     name: all
     state: import
-    login_user: "{{user}}"
-    login_password: "{{password}}"
+    login_user: "{{ user }}"
+    login_password: "{{ password }}"
     login_host: "{{ host }}"
     target: /app/schema/backend.sql
 
