@@ -1,5 +1,5 @@
 user: root
 password: ExpenseApp@1
-host: 172.31.89.212
+my_sql_host: 172.31.83.5
 App_Location: /app
 Component: backend

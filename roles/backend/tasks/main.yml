@@ -60,7 +60,7 @@
     state: import
     login_user: "{{ user }}"
     login_password: "{{ password }}"
-    login_host: "{{ host }}"
+    login_host: "{{ my_sql_host }}"
     target: /app/schema/backend.sql
 
 - name: daemon reload and restart service
