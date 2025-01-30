@@ -1,2 +1,4 @@
 
 # host: 172.31.94.225
+App_Location: /usr/share/nginx/html
+Component: frontend
