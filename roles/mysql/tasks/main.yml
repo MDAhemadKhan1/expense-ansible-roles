@@ -28,7 +28,9 @@
     executable: pip3.9
   loop:
   - cryptography
-  - PyMySql   
+  - PyMySql
+  - boto3
+  - botocore 
 
 - name: set root password
   ansible.builtin.command: "mysql_secure_installation --set-root-pass {{ lookup('amazon.aws.aws_ssm', '/expense/mysql/password', decrypt=True ) }}"
