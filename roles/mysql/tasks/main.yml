@@ -29,8 +29,7 @@
   loop:
   - cryptography
   - PyMySql
-  - boto3
-  - botocore 
+ 
 
 - name: set root password
   ansible.builtin.command: "mysql_secure_installation --set-root-pass {{password}}"
