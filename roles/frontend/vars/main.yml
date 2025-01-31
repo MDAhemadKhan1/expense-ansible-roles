@@ -1,4 +1,4 @@
 
-backend_host: 172.31.90.26
+backend_host: 
 App_Location: /usr/share/nginx/html
 Component: frontend
